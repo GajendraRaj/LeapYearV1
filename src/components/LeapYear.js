@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 function LeapYear() {
     const [state, setState] = useState({ year: 0 });
 
-    const handleInput = (e) => {
+    const handleInputChange = (e) => {
+        const year = e.target.value;
+        
         setState(prevState => {
-            return { ...prevState, year: e.target.value }
-        });
-    }
+            return { ...prevState, year: year }
+          });
+      }
 
     const checkLeapYear = (year) => {
         if(year && year.toString().length > 3 && year.toString().length < 5) {
@@ -24,7 +26,7 @@ function LeapYear() {
                     type='number'
                     placeholder='Enter a year' 
                     value={state.year}
-                    onChange={handleInput} />
+                    onChange={handleInputChange} />
             </div>
             <label>{checkLeapYear(state.year)}</label>
         </div>

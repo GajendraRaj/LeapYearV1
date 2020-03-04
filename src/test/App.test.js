@@ -13,6 +13,10 @@ describe('App Component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('check heading', () => {
+    expect(wrapper.find('h1').text()).toBe('Check Leap Year');
+  })
+
   it('should load LeapYear component', () => {
     expect(wrapper.find(LeapYear)).toBeDefined();
   })

@@ -5,6 +5,7 @@ import LeapYear from './components/LeapYear';
 function App() {
   return (
     <div className="App">
+        <h1>Check Leap Year</h1>
         <LeapYear />
     </div>
   );
