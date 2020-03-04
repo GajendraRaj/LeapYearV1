@@ -9,11 +9,11 @@ describe('App Component', () => {
     wrapper = shallow(<App />);
   });
 
-  it('Should render correctly', () => {
+  it('should render correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('Should load LeapYear component', () => {
+  it('should load LeapYear component', () => {
     expect(wrapper.find(LeapYear)).toBeDefined();
   })
 
